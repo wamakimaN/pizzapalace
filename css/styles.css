@@ -1,0 +1,33 @@
+.container-fluid {
+  background-color: aqua;
+}
+.navbar{
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: brown solid;
+
+
+}
+.logo h4{
+  letter-spacing: 5px;
+  color: #EF820D;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links a{
+  color: #EF820D;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+}
+.nav-links li{
+  list-style: none;
+  font-family: 'Poiret One', cursive;
+}
