@@ -25,6 +25,14 @@ Order.prototype.pizzaDetails = function () {
 Order.prototype.pizzaPrice = function () {
   return Math.ceil(((this.cheese+=this.veggies+=this.veggiesTwo+=this.meat+= this.sauce+= this.crust)*this.size)/10)*10;
 }
+//add contents of our array together
+Order.prototype.finalCost = function () {
+  let cartTotalPrice = 0;
+  for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement ++) {
+    cartTotalPrice += totalPriceArray[arrayElement];
+  }
+  return cartTotalPrice;
+}
 
 //user interface logic
 $(document).ready(function(){

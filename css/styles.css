@@ -75,6 +75,6 @@ body {
   padding-top: 50px;
   display: none;
 }
-footer{
-  
+#order-details{
+  display: none;
 }
