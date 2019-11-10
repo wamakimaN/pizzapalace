@@ -68,3 +68,9 @@ body {
 #ordering{
   padding-top: 50px;
 }
+.card{
+  padding: 0px;
+}
+#address{
+  display: none;
+}

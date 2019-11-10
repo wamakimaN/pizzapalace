@@ -59,18 +59,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <img class="img-fluid" src="images/pepperoni-pizza-food-hungry-ss-1920.jpg" alt="mouth watering pizza">
       </div>
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <img class="img-fluid" src="images/pizza1.jpg" alt="delicious just looking at it">
       </div>
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <img class="img-fluid" src="images/pizza2.jpg" alt="finger lickin">
       </div>
     </div>
     <div class="row" id="ordering">
-      <div class="col-md-6 card bd-0">
+      <div class="col-sm-6 card bd-0">
         <div class="card-header">
           Please select what you would like on your Pizza
         </div>
@@ -115,19 +115,46 @@
             <option value="450">chicken</option>
             <option value="350">beef</option>
           </select><br>
-          <button type="button" class="btn btn-success" id="add-cart">add to cart</button>
+          <button type="button" class="btn btn-oblong btn-outline-success" id="add-cart">add to cart</button>
         </div>
       </div>
-      <div class="col-md-6 card bd-0">
+      <div class="col-sm-6 card bd-0">
         <div class="card-header">
           Order Cart
         </div>
         <div class="card-body bd bd-t-0 rounded-bottom">
           <p>Cart is empty</p>
-          <button type="button" class="btn btn-warning" id="delivery">Delivery</button>
-          <button type="button" class="btn btn-danger" id="check-out">Checkout</button>
+          <button type="button" class="btn btn-outline-warning" id="delivery">Delivery</button>
+          <button type="button" class="btn btn-outline-danger" id="check-out">Checkout</button>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <form class=" col-12 delivery form-group card bd-0" id="address">
+        <div class="card-header">
+          Delivery address
+        </div>
+        <div class="card-body bd bd-t-0 rounded-bottom">
+          <div class="row">
+            <div class="col-md-6">
+              <label id="firstName">First Name</label><input type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label id="lastName">Last Name</label><input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label id="cityName">City</label><input type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label id="streetAddress">Address</label><input type="text" class="form-control">
+            </div>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>
+        </div>
+      </form>
     </div>
     <br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
