@@ -21,15 +21,16 @@ Order.prototype.pizzaDetails = function () {
 }
 
 //calculate the cost of a pizza
+//always return rounded up to nearest 10
 Order.prototype.pizzaPrice = function () {
-  return ((this.cheese+=this.veggies+=this.veggiesTwo+=this.meat+= this.sauce+= this.crust)*this.size)
+  return Math.ceil(((this.cheese+=this.veggies+=this.veggiesTwo+=this.meat+= this.sauce+= this.crust)*this.size)/10)*10;
 }
 
 //user interface logic
 $(document).ready(function(){
   $("form#order").submit(function(event){
     event.preventDefault()
-
+    //gather input from user
     let pizzaSize = $("#size option:selected").text();
     let pizzaCrust = $("#crust option:selected").text();
     let pizzaSauce = $("#sauce option:selected").text();
@@ -37,8 +38,25 @@ $(document).ready(function(){
     let pveggiesTwo = $("#more-veggies option:selected").text();
     let pizzaCheese = $("#cheese option:selected").text();
     let pizzaMeat = $("#meat option:selected").text();
-
+    
     let newOrder = new Order(pizzaSize, pizzaCrust, pizzaCheese, pizzaSauce, pizzaVeggies, pveggiesTwo, pizzaMeat);
     console.log(newOrder.pizzaDetails());
+    
+    //get value of selected ingredients
+    let costSize = parseFloat($("#size option:selected").val());
+    let costCrust = parseInt($("#crust option:selected").val());
+    let costSauce = parseInt($("#sauce option:selected").val());
+    let costVeggy = parseInt($("#veggies option:selected").val());
+    let costVeggies = parseInt($("#more-veggies option:selected").val());
+    let costCheese = parseInt($("#cheese option:selected").val());
+    let costMeat = parseInt($("#meat option:selected").val());
+
+    //avoided errors from a blank input
+    if ($("#more-veggies option:selected").val() === ("")) {
+      costVeggies = 0;
+    }
+    
+    let pizzaCost = new Order(costSize, costCrust, costCheese, costSauce, costVeggy, costVeggies, costMeat);
+    console.log(pizzaCost.pizzaPrice())
   })
 })
