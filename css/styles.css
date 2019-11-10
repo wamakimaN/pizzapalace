@@ -54,8 +54,14 @@ body {
   width: 100%;
   padding-top: unset;
   color: beige;
+  font-family: 'Rochester', cursive;
+  font-weight: bolder;
 }
 
 .banner i {
   font-size: 80px;
+  color: aqua;
+}
+.about {
+  padding-top: 50px;
 }
