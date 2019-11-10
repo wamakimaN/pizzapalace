@@ -48,7 +48,6 @@ $(document).ready(function(){
     let pizzaMeat = $("#meat option:selected").text();
     
     let newOrder = new Order(pizzaSize, pizzaCrust, pizzaCheese, pizzaSauce, pizzaVeggies, pveggiesTwo, pizzaMeat);
-    console.log(newOrder.pizzaDetails());
     
     //get value of selected ingredients
     let costSize = parseFloat($("#size option:selected").val());
@@ -65,6 +64,14 @@ $(document).ready(function(){
     }
     
     let pizzaCost = new Order(costSize, costCrust, costCheese, costSauce, costVeggy, costVeggies, costMeat);
-    console.log(pizzaCost.pizzaPrice())
+
+    //ensure value is never re-declared!!
+    let finalPrice = pizzaCost.pizzaPrice();
+
+    totalPriceArray.push(finalPrice);
+    $("#order-details").show();
+    $("#holder").hide()
+    $("#pizza-details").append("<ul><li>" + pizzaSize + finalPrice + "</li></ul>");
+    $("#final-cost").text(pizzaCost.finalCost());
   })
 })
