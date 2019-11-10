@@ -72,5 +72,9 @@ body {
   padding: 0px;
 }
 #address{
+  padding-top: 50px;
   display: none;
+}
+footer{
+  
 }
