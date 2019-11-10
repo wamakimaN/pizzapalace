@@ -25,3 +25,20 @@ Order.prototype.pizzaPrice = function () {
   return ((this.cheese+=this.veggies+=this.veggiesTwo+=this.meat+= this.sauce+= this.crust)*this.size)
 }
 
+//user interface logic
+$(document).ready(function(){
+  $("form#order").submit(function(event){
+    event.preventDefault()
+
+    let pizzaSize = $("#size option:selected").text();
+    let pizzaCrust = $("#crust option:selected").text();
+    let pizzaSauce = $("#sauce option:selected").text();
+    let pizzaVeggies = $("#veggies option:selected").text();
+    let pveggiesTwo = $("#more-veggies option:selected").text();
+    let pizzaCheese = $("#cheese option:selected").text();
+    let pizzaMeat = $("#meat option:selected").text();
+
+    let newOrder = new Order(pizzaSize, pizzaCrust, pizzaCheese, pizzaSauce, pizzaVeggies, pveggiesTwo, pizzaMeat);
+    console.log(newOrder.pizzaDetails());
+  })
+})
