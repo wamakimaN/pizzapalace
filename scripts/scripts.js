@@ -20,3 +20,8 @@ Order.prototype.pizzaDetails = function () {
   meat:${this.meat}`
 }
 
+//calculate the cost of a pizza
+Order.prototype.pizzaPrice = function () {
+  return ((this.cheese+=this.veggies+=this.veggiesTwo+=this.meat+= this.sauce+= this.crust)*this.size)
+}
+
