@@ -1,33 +1,60 @@
-.container-fluid {
-  background-color: aqua;
+body {
+  margin: 0;
+  padding: 0;
 }
-.navbar{
+
+.container-fluid {}
+
+.navbar {
   justify-content: space-around;
   align-items: center;
-  border-bottom: brown solid;
-
-
+  box-shadow: 0px 0px 3px grey;
+  z-index: 1;
+  position: fixed;
+  clear: both;
+  background-color: rgb(26, 35, 36);
 }
-.logo h4{
+
+.logo h4 {
   letter-spacing: 5px;
   color: #EF820D;
   text-decoration: none;
   font-size: 20px;
-  font-weight: bold;
 }
-.nav-links{
+
+.logo a {
+  text-decoration: none;
+}
+
+.nav-links {
   display: flex;
   justify-content: space-around;
   width: 30%;
+  padding-top: 5px;
 }
-.nav-links a{
+
+.nav-links a {
   color: #EF820D;
   text-decoration: none;
-  font-weight: bold;
   font-size: 20px;
   align-items: center;
 }
-.nav-links li{
+
+.nav-links li {
   list-style: none;
   font-family: 'Poiret One', cursive;
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/pizza.jpg);
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding-top: unset;
+  color: beige;
+}
+
+.banner i {
+  font-size: 80px;
 }
