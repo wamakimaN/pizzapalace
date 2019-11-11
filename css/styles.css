@@ -13,14 +13,16 @@ body {
   z-index: 1;
   position: fixed;
   clear: both;
-  background-color: rgb(26, 35, 36);
+  background-color: rgb(255, 255, 255);
 }
 
 .logo h4 {
   letter-spacing: 5px;
-  color: #EF820D;
+  color: rgb(93, 52, 160);
   text-decoration: none;
   font-size: 20px;
+  font-family: 'Rochester', cursive;
+  font-weight: bolder;
 }
 
 .logo a {
@@ -35,15 +37,15 @@ body {
 }
 
 .nav-links a {
-  color: #EF820D;
+  color: rgb(93, 52, 160);
+  ;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 30px;
   align-items: center;
 }
 
 .nav-links li {
   list-style: none;
-  font-family: 'Poiret One', cursive;
 }
 
 .banner {
@@ -62,19 +64,43 @@ body {
   font-size: 80px;
   color: aqua;
 }
+
 .about {
   padding-top: 50px;
 }
-#ordering{
+
+#ordering {
   padding-top: 50px;
 }
-.card{
+
+.card {
   padding: 0px;
 }
-#address{
+
+#address {
   padding-top: 50px;
   display: none;
 }
-#order-details{
+
+#order-details {
   display: none;
+
+}
+
+#pizza-details li {
+  list-style: none;
+  padding: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+@media screen and (max-width:767px) {
+  .nav-links i {
+    font-size: 14px;
+    width: 100%;
+  }
 }
